@@ -1,6 +1,6 @@
 {
 	"name": "lasso-coffee2",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "This plugin for Lasso.js provides support for compilation of CoffeeScript 2 dependencies.",
 	"keywords": [
 		"lasso",
