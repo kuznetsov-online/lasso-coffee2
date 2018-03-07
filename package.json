@@ -13,14 +13,14 @@
 		"type": "git",
 		"url": "https://github.com/kuznetsov-online/lasso-coffee2.git"
 	},
-	"main": "lib/index.js",
+	"scripts": {
+		"prepublishOnly": "npm version patch && node_modules/coffeescript/bin/coffee -b -c --no-header -o dist src",
+		"postpublish": "git push && git push --tags"
+	},
+	"main": "dist",
 	"dependencies": {
 		"babel-core": "^6.26.0",
 		"babel-preset-es2015": "^6.24.1",
 		"coffeescript": "^2.2.2"
-	},
-	"scripts": {
-		"prepublishOnly": "npm version patch && node_modules/coffeescript/bin/coffee -b -c --no-header -o lib src",
-		"postpublish": "git push && git push --tags"
 	}
 }
