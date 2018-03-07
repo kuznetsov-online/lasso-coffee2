@@ -20,7 +20,7 @@
 		"coffeescript": "^2.2.2"
 	},
 	"scripts": {
-		"prepublishOnly": "npm version patch && gitnode_modules/coffeescript/bin/coffee -b -c --no-header -o lib src",
+		"prepublishOnly": "npm version patch && node_modules/coffeescript/bin/coffee -b -c --no-header -o lib src",
 		"postpublish": "git push"
 	}
 }
