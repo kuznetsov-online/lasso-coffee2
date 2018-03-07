@@ -1,5 +1,5 @@
-fs = require('fs')
-CoffeeScript = require('coffeescript')
+fs = require 'fs'
+CoffeeScript = require 'coffeescript'
 
 module.exports = (lasso, config) -> lasso.dependencies.registerRequireType 'coffee',
 
@@ -16,8 +16,7 @@ module.exports = (lasso, config) -> lasso.dependencies.registerRequireType 'coff
 
 	read: (context, callback) -> new Promise (resolve, reject) =>
 		callback = callback || (err, res) -> if err then reject(err) else resolve(res)
-		path = @path
-		fs.readFile path, {encoding: 'utf8'}, (err, code) ->
+		fs.readFile @path, {encoding: 'utf8'}, (err, code) ->
 			return callback err if err
 			compiledCode = CoffeeScript.compile code,
 				bare: true

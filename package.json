@@ -1,20 +1,25 @@
 {
-  "name": "lasso-coffee2",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kuznetsov-online/lasso-coffee2.git"
-  },
-  "keywords": [
-    "lasso",
-    "lasso-plugin",
-    "coffeescript"
-  ],
-  "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "coffeescript": "^2.2.2"
-  }
+	"name": "lasso-coffee2",
+	"version": "1.0.0",
+	"description": "This plugin for Lasso.js provides support for compilation of CoffeeScript 2 dependencies.",
+	"keywords": [
+		"lasso",
+		"lasso-plugin",
+		"coffeescript"
+	],
+	"author": "Alexander Kuznetsov <alexander@kuznetsov.online>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kuznetsov-online/lasso-coffee2.git"
+	},
+	"main": "lib/index.js",
+	"dependencies": {
+		"babel-core": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"coffeescript": "^2.2.2"
+	},
+	"scripts": {
+		"publish": "npm version && node_modules/coffeescript/bin/coffee -b -c --no-header -o lib src && npm publish"
+	}
 }
